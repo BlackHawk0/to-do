@@ -1,12 +1,13 @@
 import React from 'react'
+import '../App.css'
 
-function Todo({todo}) {
-    console.log(todo);
+function Todo({todo}) {    
     return (
-        <div>
-            {todo.title}
+        <div className={todo.completed ? "strike" : " "}>
+            <p className='todo'>{todo.title} </p>
         </div>
     )
 }
 
 export default Todo
+

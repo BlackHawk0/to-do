@@ -2,9 +2,9 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div>
+    <nav>
       <h1>Todo-List App</h1>
-    </div>
+    </nav>
   )
 }
 

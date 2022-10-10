@@ -106,3 +106,20 @@ input:focus,
 button:focus {
   outline: none;
 }
+
+
+.strike{
+  text-decoration: line-through;
+  color: red
+}
+.todo{
+    font-family: 'Roboto', sans-serif;
+    font-size:2rem;
+    color:#fff;
+    background: #3f3f3f;
+    padding: 1rem;
+    margin: 1.5rem;
+    border-radius: 5%;
+    box-shadow: 1px 1px 3px #000;
+
+}

@@ -5,40 +5,40 @@
       {
         "id": 1,
         "title": "Debug my code",
-        "completed": "false"
+        "completed": false
       },
       {
         "id": 2,
         "title": "Do Laundry",
-        "completed": "false"
+        "completed": true
       },
       {
         "id": 3,
         "title": "Complete project",
-        "completed": "false"
+        "completed": false
       },
       {
         "id": 4,
         "title": "Finish end of phase project",
-        "completed": "Food"
+        "completed": false
         
       },
       {
         "id": 5,
         "title": "Try React Exercise",
-        "completed": "false"
+        "completed": false
         
       },
       {
         "id": 6,
         "title": "understand react",
-        "completed": "false"
+        "completed": false
         
       },
       {
         "id": 7,
-        "title": "Finish end of phase project id 7",
-        "completed": "false"
+        "title": "Finish end of phase project",
+        "completed": false
         
       }
     ]
