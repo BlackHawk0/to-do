@@ -18,19 +18,19 @@ function App() {
     .then(data => setTest(data))
   }, [])
 
-  console.log(test);
  
   return (
     <div className="container">
       <div className="App-wrapper" >
         <div>
-          <Header />
+          {/* <Header /> */}
         </div>
         <div>
-          <TodoForm input={input}  setInput={setInput} todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/>
+          {/* <TodoForm input={input}  setInput={setInput} todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/> */}
         </div>
         <div>
-         <TodoList todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/>
+         {/* <TodoList todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/> */}
+         <TodoList todos={test} />
         </div>
       </div>  
     </div>
