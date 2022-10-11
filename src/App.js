@@ -5,7 +5,7 @@ import Header from './component/Header';
 import TodoList from './component/TodoLists';
 
 function App() {
-  // const initialState =JSON.parse(localStorage.getItem("todos") || []);
+
   const [test, setTest] = useState([])
   
 
@@ -15,14 +15,26 @@ function App() {
     .then(data => setTest(data))
   }, [])
 
+
+  // delete todo list
   function deleteTodo(id){
     setTest(test.filter(todo => todo.id !== id))
     fetch(`http://localhost:3000/todos/${id}`,{
       method: 'DELETE',
     })
-    .then(response => response.json())
-    .then(data => console.log(data))
 
+  }
+
+  //update a todo 
+  function handleUpdate(todo){
+    console.log(todo);
+    // fetch(`http://localhost:3000/todos/${todo.id}`,{
+    //   method: 'PATCH',
+    //   headers: {'Content-Type': 'application/json'},
+    //   body: JSON.stringify(todo)
+    // })
+    // .then(response => response.json())
+    // .then(data => setTest(data))
   }
 
  
@@ -33,7 +45,7 @@ function App() {
           <Header />
         </div>
         <div>
-         <TodoForm items={test} del={deleteTodo}/> 
+         <TodoForm items={test} del={deleteTodo} onUpdate={handleUpdate}/> 
           {/* <TodoForm input={input}  setInput={setInput} todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/> */}
         </div>
         <div>

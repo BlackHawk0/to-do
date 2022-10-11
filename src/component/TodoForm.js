@@ -2,7 +2,7 @@ import React , {useState } from 'react'
 import Todo from './Todo'
 
 
-function TodoForm({items, del}){
+function TodoForm({items, del, onUpdate}){
     const [input, setInput] = useState("");
     const [todos, setTodos] = useState({title:'', completed: false});
 
@@ -37,8 +37,8 @@ function TodoForm({items, del}){
               <button type="submit" className='button-add' onClick={handleSubmit}>Add Todo</button>
             </form>
              <div>
-           {items.map((todo) => <Todo key={todo.id} todo={todo} del={del} />)}
-        </div>
+              {items.map((todo) => <Todo key={todo.id} todo={todo} del={del} onUpdate={onUpdate} />)}
+            </div>
         </div>
     )
 }

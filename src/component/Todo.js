@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import '../App.css'
 
-function Todo({todo, del}) { 
+function Todo({todo, del, onUpdate}) { 
 
     const [isEditing, setIsEditing] = useState(false)
     const [newTitle, setNewTitle] = useState(todo.title)
@@ -19,8 +19,11 @@ function Todo({todo, del}) {
 
     function handleUpdate(e){
         e.preventDefault()
-        todo.title = newTitle
+        if(newTitle !== todo.title){
+            todo.title = newTitle
+        }
         setIsEditing(false)
+        onUpdate(todo)
     }
 
     function handleDelete(){
