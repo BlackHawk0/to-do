@@ -15,6 +15,11 @@ function App() {
     .then(data => setTest(data))
   }, [])
 
+  function deleteTodo(id){
+    const newTodo = test.filter(todo => todo.id !== id)
+    setTest(newTodo)
+  }
+
  
   return (
     <div className="container">
@@ -23,12 +28,12 @@ function App() {
           <Header />
         </div>
         <div>
-         <TodoForm /> 
+         <TodoForm items={test} del={deleteTodo}/> 
           {/* <TodoForm input={input}  setInput={setInput} todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/> */}
         </div>
         <div>
          {/* <TodoList todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/> */}
-         <TodoList todos={test} />
+         {/* <TodoList todos={test} /> */}
         
         </div>
       </div>  

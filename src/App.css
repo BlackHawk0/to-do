@@ -42,19 +42,20 @@
 }
 
 .button-add {
-  width: 70px;
-  padding: 15px 15px;
-  font-size: 20px;
+  outline: none;
+  width: 100px;
+  padding: 15px;
+  font-size: 16px;
+  color: #ccc;
+  background-color: #000000;
+  border: 1px solid #c89666;
   border-radius: 10px;
-  border: 0;
-  background-color: #f1aff1;
-  cursor: pointer;
 }
+
 
 .list-item {
   display: flex;
   margin: 20px 0;
-  /* border: 1px solid #ccc; */
   border-radius: 10px;
   padding: 10px;
   max-height: 30px;
@@ -133,10 +134,12 @@ button:focus {
 }
 
 
-/* .strike{
+ .strike{
   text-decoration: line-through;
   color: red
 }
+
+/*
 .todo{
     font-family: 'Roboto', sans-serif;
     display: flex;
