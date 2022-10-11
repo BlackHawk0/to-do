@@ -6,9 +6,6 @@ import TodoList from './component/TodoLists';
 
 function App() {
   // const initialState =JSON.parse(localStorage.getItem("todos") || []);
-  const [input,setInput]= useState("");
-  const [todos,setTodos]= useState([]);
-  const [editTodo,setEditTodo]=useState(null);
   const [test, setTest] = useState([])
   
 
@@ -26,11 +23,13 @@ function App() {
           <Header />
         </div>
         <div>
-          <TodoForm input={input}  setInput={setInput} todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/>
+         <TodoForm /> 
+          {/* <TodoForm input={input}  setInput={setInput} todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/> */}
         </div>
         <div>
          {/* <TodoList todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/> */}
          <TodoList todos={test} />
+        
         </div>
       </div>  
     </div>
