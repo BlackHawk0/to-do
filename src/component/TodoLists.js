@@ -1,17 +1,15 @@
 import React from 'react'
-// import Todo from './Todo'
+import Todo from './Todo'
 
 
-// const TodoLists = ({todos , setTodos, setEditTodo}) => {
-
-const TodoLists = ({todos}) => {
+const TodoLists = ({todos, del, onUpdate}) => {
 
     return(
-        // <div>
-        //    {todos.map((todo) => <Todo key={todo.id} todo={todo} />)}
-        // </div>
-        <p>Doing nothing</p>
+        <div>
+           {todos.map((todo) => <Todo key={todo.id} todo={todo} del={del} onUpdate={onUpdate} />)}
+        </div>
     )
+  
    
    
 }

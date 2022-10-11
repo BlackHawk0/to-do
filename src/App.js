@@ -41,12 +41,10 @@ function App() {
           <Header />
         </div>
         <div>
-         <TodoForm items={test} del={deleteTodo} onUpdate={handleUpdate}/> 
-          {/* <TodoForm input={input}  setInput={setInput} todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/> */}
+         <TodoForm items={test} /> 
         </div>
         <div>
-         {/* <TodoList todos={todos} setTodos={setTodos} editTodo={editTodo} setEditTodo={setEditTodo}/> */}
-         {/* <TodoList todos={test} /> */}
+         <TodoList todos={test} del={deleteTodo} onUpdate={handleUpdate} />
         
         </div>
       </div>  
