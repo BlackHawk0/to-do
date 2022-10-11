@@ -20,7 +20,7 @@ function Todo({todo, del, onUpdate}) {
     }
 
     function handleUpdate(e){
-        // e.preventDefault()
+        e.preventDefault()
         if(newTitle !== todo.title){
             todo.title = newTitle
         }
@@ -45,23 +45,23 @@ function Todo({todo, del, onUpdate}) {
 
     return (
         <div className={todo.completed ? "strike" : " "}>
-        <div className= 'wrap'>
-        <div className='todo2'>
-            <li className='list-item'>{todo.title} </li>
-            
-        </div>
-        <div className="todo1">
-            <button className='button-complete' onClick={handleComplete}>
-                <i className='fa fa-check-circle'></i>
-            </button>
-            <button className='button-edit' onClick={handleEdit}>
-                <i className='fa fa-edit'></i>
-            </button>
-            <button className='button-delete' onClick={handleDelete}>
-                <i className='fa fa-trash'></i>
-            </button> 
-        </div>
-        </div>
+            <div className= 'wrap'>
+                <div>
+                    <li className='list-item'>{todo.title} </li>
+                    
+                </div>
+                <div>
+                    <button className='button-complete' onClick={handleComplete}>
+                        <i className='fa fa-check-circle'></i>
+                    </button>
+                    <button className='button-edit' onClick={handleEdit}>
+                        <i className='fa fa-edit'></i>
+                    </button>
+                    <button className='button-delete' onClick={handleDelete}>
+                        <i className='fa fa-trash'></i>
+                    </button> 
+                </div>
+            </div>
            
         </div>
     )

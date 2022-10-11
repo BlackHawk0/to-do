@@ -120,19 +120,6 @@ button:focus {
     max-height: 30px;
     background-color: #062a31
 }
-.todo1{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.todo2{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
 
  .strike{
   text-decoration: line-through;

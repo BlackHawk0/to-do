@@ -10,28 +10,28 @@ function TodoForm(){
         setInput(e.target.value );
     }
 
-     const handleSubmit = (e) => {
-        e.preventDefault();
-        if(!input)
-        {
-            return alert('Please enter a todo item')
-        }else{
-          fetch('http://localhost:3000/todos', {
-             method: 'POST',
-           headers: {
-               'Content-Type': 'application/json'
-           },
-           body: JSON.stringify({
-               title: input,
-               completed: false
-           })
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if(!input)
+      {
+          return alert('Please enter a todo item')
+      }else{
+        fetch('http://localhost:3000/todos', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              title: input,
+              completed: false
           })
-          .then(response => response.json())
-          .then(data => {
-           setTodos({...todos, data});
-           setInput("");
-          })
-        }
+        })
+        .then(response => response.json())
+        .then(data => {
+          setTodos({...todos, data});
+          setInput("");
+        })
+      }
     }
 
 

@@ -3,27 +3,27 @@
     {
       "id": 1,
       "title": "Debug my code",
-      "completed": false
+      "completed": true
     },
     {
       "id": 2,
       "title": "Do Laundry",
-      "completed": false
+      "completed": true
     },
     {
       "id": 3,
       "title": "Complete project",
-      "completed": true
+      "completed": false
     },
     {
       "id": 4,
       "title": "Finish end of phase project",
-      "completed": true
+      "completed": false
     },
     {
       "id": 5,
       "title": "Try React Exercise 2",
-      "completed": false
+      "completed": true
     },
     {
       "id": 6,
@@ -49,16 +49,6 @@
       "title": "wash my dog",
       "completed": false,
       "id": 10
-    },
-    {
-      "title": "Sleep",
-      "completed": false,
-      "id": 11
-    },
-    {
-      "title": "Go to space",
-      "completed": false,
-      "id": 12
     }
   ]
 }
