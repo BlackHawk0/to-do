@@ -16,8 +16,13 @@ function App() {
   }, [])
 
   function deleteTodo(id){
-    const newTodo = test.filter(todo => todo.id !== id)
-    setTest(newTodo)
+    setTest(test.filter(todo => todo.id !== id))
+    fetch(`http://localhost:3000/todos/${id}`,{
+      method: 'DELETE',
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+
   }
 
  
