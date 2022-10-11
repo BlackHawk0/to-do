@@ -24,17 +24,13 @@ function App() {
     })
 
   }
-
   //update a todo 
   function handleUpdate(todo){
-    console.log(todo);
-    // fetch(`http://localhost:3000/todos/${todo.id}`,{
-    //   method: 'PATCH',
-    //   headers: {'Content-Type': 'application/json'},
-    //   body: JSON.stringify(todo)
-    // })
-    // .then(response => response.json())
-    // .then(data => setTest(data))
+    fetch(`http://localhost:3000/todos/${todo.id}`,{
+      method: 'PATCH',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(todo)
+    })
   }
 
  
