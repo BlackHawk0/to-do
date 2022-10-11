@@ -7,12 +7,16 @@ function TodoForm(){
     const [todos, setTodos] = useState({title:'', completed: false});
 
     const handleChange = (e) => {
-        setInput(e.target.value);
+        setInput(e.target.value );
     }
 
      const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3000/todos', {
+        if(!input)
+        {
+            return alert('Please enter a todo item')
+        }else{
+          fetch('http://localhost:3000/todos', {
              method: 'POST',
            headers: {
                'Content-Type': 'application/json'
@@ -21,20 +25,20 @@ function TodoForm(){
                title: input,
                completed: false
            })
-       })
-       .then(response => response.json())
-       .then(data => {
+          })
+          .then(response => response.json())
+          .then(data => {
            setTodos({...todos, data});
            setInput("");
-           
-       })
+          })
+        }
     }
 
 
     return (
         <div>
             <form>
-              <input type="text" className="task-input" placeholder='Enter a Todo...' onChange={handleChange} />
+              <input type="text" className="task-input" placeholder='Enter a Todo...' value={input} onChange={handleChange} />
               <button type="submit" className='button-add' onClick={handleSubmit}>Add Todo</button>
             </form>
         </div>
