@@ -54,10 +54,11 @@
 .list-item {
   display: flex;
   margin: 20px 0;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 10px;
   padding: 10px;
   max-height: 30px;
+  color: #fff;
 }
 
 .button-complete,
@@ -106,14 +107,39 @@ input:focus,
 button:focus {
   outline: none;
 }
+.wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 30px;
+    background-color: #062a31
+}
+.todo1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.todo2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
 
-.strike{
+/* .strike{
   text-decoration: line-through;
   color: red
 }
 .todo{
     font-family: 'Roboto', sans-serif;
+    display: flex;
     font-size:2rem;
     color:#fff;
     background: #3f3f3f;
@@ -121,5 +147,27 @@ button:focus {
     margin: 1.5rem;
     border-radius: 5%;
     box-shadow: 1px 1px 3px #000;
+    display: block;
 
-}
+} */
+
+/* .todo{
+    font-size: 1.5rem;
+    display: inline-block;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+} */
+
+/* .button-complete{
+    background: none;
+    display: relative;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+} */
