@@ -8,6 +8,8 @@ function Todo({todo, del, onUpdate}) {
 
     function handleComplete(){
         todo.completed = !todo.completed
+        onUpdate(todo)
+       
     }
     function handleEdit(){
         setIsEditing(true)
@@ -18,7 +20,7 @@ function Todo({todo, del, onUpdate}) {
     }
 
     function handleUpdate(e){
-        e.preventDefault()
+        // e.preventDefault()
         if(newTitle !== todo.title){
             todo.title = newTitle
         }

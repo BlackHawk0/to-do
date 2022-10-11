@@ -24,8 +24,9 @@ function TodoForm({items, del, onUpdate}){
        })
        .then(response => response.json())
        .then(data => {
-           setTodos([...todos, data]);
+           setTodos({...todos, data});
            setInput("");
+           
        })
     }
 

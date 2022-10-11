@@ -8,12 +8,12 @@
     {
       "id": 2,
       "title": "Do Laundry",
-      "completed": true
+      "completed": false
     },
     {
       "id": 3,
       "title": "Complete project",
-      "completed": false
+      "completed": true
     },
     {
       "id": 4,
@@ -49,6 +49,16 @@
       "title": "wash my dog",
       "completed": false,
       "id": 10
+    },
+    {
+      "title": "Sleep",
+      "completed": false,
+      "id": 11
+    },
+    {
+      "title": "Go to space",
+      "completed": false,
+      "id": 12
     }
   ]
 }
