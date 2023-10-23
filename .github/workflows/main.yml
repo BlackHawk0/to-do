@@ -1,0 +1,55 @@
+name: Continous Integration
+
+on:
+  push:
+    branches:
+      - 'source'
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: 'Build 📦'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Gatsby cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/public
+            **/.cache
+          key: gatsby-cache
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: 'npm'
+      - run: npm install
+        name: Install dependencies
+      - run: npm lint
+        name: Run lint
+      - run: npm build
+        name: Build Gatsby output
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: ./public
+  dependabot:
+    name: 'Dependabot'
+    needs: [build]
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' && github.event_name == 'pull_request'}}
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1.3.1
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
