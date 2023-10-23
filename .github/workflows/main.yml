@@ -2,7 +2,7 @@ name: Continuous Integration
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # Run every 60 minutes
+    - cron: '*/60 * * * *'  # Run every 60 minutes
 
 permissions:
   contents: write
