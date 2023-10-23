@@ -3,6 +3,9 @@ name: Continuous Integration
 on:
   schedule:
     - cron: '*/10 * * * *'  # Run every 60 minutes
+  pull_request:
+    types:
+      - opened
 
 permissions:
   contents: write
